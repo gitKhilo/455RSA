@@ -1,0 +1,42 @@
+ TestMe Instructions
+
+ Prerequisites
+1. Python 3.9+ installed.
+2. `pip install -r requirements.txt` executed.
+3. `.env` file with `GROQ_API_KEY`.
+
+---
+
+ Functional Tests
+
+ 1. Backend RSA Chatbot
+**Command**: `python backend.py`
+- Enter a cryptography-related question.
+- Verify output is provided without errors.
+
+ 2. GUI Application
+**Command**: `python backend_with_tkinter.py`
+- Test the login functionality (register, login).
+- Perform RSA encryption/decryption (generate keys, encrypt/decrypt messages).
+- Validate history tracking and CSV export.
+
+ 3. Environment Variable Loading
+**Command**: `python env.py`
+- Ensure `GROQ_API_KEY` is printed correctly.
+
+---
+
+ Integration Tests
+1. Generate a key pair in GUI → Encrypt a message → Decrypt message.
+2. Use nonce authentication to simulate KDC exchange.
+
+---
+
+ Edge Cases
+- Invalid ciphertext decryption (expect error message).
+- Duplicate user registration (expect failure warning).
+
+---
+
+ Notes
+Run tests in a controlled environment to avoid exposing sensitive keys.
